@@ -1,6 +1,6 @@
 # Fork Customizations
 
-> This repository is a fork of [unknown]().
+> This repository is a fork of [OrhanUlusoy/StockholmPriceIntelligence](https://github.com/OrhanUlusoy/StockholmPriceIntelligence).
 > Managed under the [iAiFy Enterprise](https://github.com/enterprises/iAiFy) governance model.
 
 ## Purpose
@@ -11,7 +11,7 @@ Stockholm price intelligence — data analysis and finance tools (fork)
 
 | Property | Value |
 |----------|-------|
-| Upstream | [unknown]() |
+| Upstream | [OrhanUlusoy/StockholmPriceIntelligence](https://github.com/OrhanUlusoy/StockholmPriceIntelligence) |
 | Language | TypeScript |
 | Fork org | AiFeatures |
 
