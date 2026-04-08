@@ -1,0 +1,32 @@
+name: CI - Docker (frontend)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/ci-docker-frontend.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/ci-docker-frontend.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  security-events: write
+  id-token: write
+  attestations: write
+
+jobs:
+  docker:
+    uses: Ai-road-4-You/enterprise-ci-cd/.github/workflows/ci-docker.yml@v1
+    with:
+      image-name: stockholm-price-intelligence-frontend
+      dockerfile: frontend/Dockerfile
+      context: frontend
+      push: ${{ github.event_name != 'pull_request' }}
+      tags-override: |
+        type=raw,value=latest
